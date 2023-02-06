@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculator && Currency converter</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/global.css" /> 
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="canver">
+        <form class="form">
+          <h1 class="canver__title">Конвертер валют</h1>
+          <div class="canver__top">
+            <div class="canver__top-box">
+              <h5 class="canver__box-title">Курс USD</h5>
+							<p class="canver__box-value" data-value="USD">--.--</p>
+            </div>
+            <div class="canver__top-box">
+              <h5 class="canver__box-title">Курс EUR</h5>
+							<p class="canver__box-value" data-value="EUR">--.--</p>
+            </div>
+            <div class="canver__top-box">
+              <h5 class="canver__box-title">Курс GPB</h5>
+							<p class="canver__box-value" data-value="GBP">--.--</p>
+            </div>
+          </div>
+
+          <div class="canver__row">
+            <div class="canver__row-box">
+              <label for="name">Віддаю:</label>
+              <select class="canver__row-select" id="" disabled>
+                <option value="RUB" selected>UAH — Гривня</option>
+              </select>
+            </div>
+            <div class="canver__row-box">
+              <label for="name">Отримую:</label>
+              <select class="canver__row-select" id="select">
+                <option value="USD">USD — Доллар США</option>
+								<option value="EUR">EUR — Євро</option>
+								<option value="GBP">GPB — Фунт стерлингів</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="canver__bottom">
+            <input id="input" class="canver__bottom-input" type="number" autofocus>
+            <input id="result" class="canver__bottom-input" type="number" disabled>
+          </div>
+        </form>
+      </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
