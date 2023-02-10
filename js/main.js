@@ -4,7 +4,7 @@ const select = document.querySelector('#select')
 const input = document.querySelector('#input')
 const result = document.querySelector('#result')
 
-setInterval(getCurrencies, 60000)
+const valuesArray = ['USD', 'EUR', 'GBP', 'CAD', 'DKK', 'SEK']
 
 async function getCurrencies () {
   const currency = {}
@@ -14,13 +14,14 @@ async function getCurrencies () {
   const response = await fetch(url)
   const data = await response.json();
   
-  for (let item of values) {
+  for (let item of valuesArray) {
     for (let el of data) {
-      if (item.dataset.value === el.cc) (
-        currency[el.cc] = el.rate.toFixed(2),
-        item.textContent = el.rate.toFixed(2)
-      )
+      if (item === el.cc) currency[el.cc] = el.rate.toFixed(2)
     }
+  }
+  
+  for (let item of values) {
+    if (currency[item.dataset.value]) item.textContent = currency[item.dataset.value]
   }
 
   return currency

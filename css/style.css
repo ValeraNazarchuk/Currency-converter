@@ -106,3 +106,29 @@ body {
   -moz-box-shadow: 0px 0px 20px 0px cornflowerblue;
   box-shadow: 0px 0px 20px 0px cornflowerblue;
 }
+
+@media(max-width: 500px) {
+  .canver__top-box {
+    padding: 10px;
+  }
+  
+  .canver__box-title,
+  .canver__box-value{    
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  .canver__row {
+    gap: 10px;
+  }
+
+  .canver__bottom{
+    gap: 10px;
+  }
+}
+
+@media(max-width: 410px) {
+  .canver__row-select {
+    max-width: 160px;
+  }
+}
