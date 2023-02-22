@@ -4,7 +4,7 @@ const select = document.querySelector('#select')
 const input = document.querySelector('#input')
 const result = document.querySelector('#result')
 
-const valuesArray = ['USD', 'EUR', 'GBP', 'CAD', 'DKK', 'SEK']
+const currencies = ['USD', 'EUR', 'GBP', 'CAD', 'DKK', 'SEK']
 
 async function getCurrencies () {
   const currency = {}
@@ -14,7 +14,7 @@ async function getCurrencies () {
   const response = await fetch(url)
   const data = await response.json();
   
-  for (let item of valuesArray) {
+  for (let item of currencies) {
     for (let el of data) {
       if (item === el.cc) currency[el.cc] = el.rate.toFixed(2)
     }

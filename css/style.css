@@ -30,16 +30,27 @@ body {
 }
 
 .canver {
-  margin: 40px auto;
-  max-width: 500px;
+  background-image: url(../images/background2.jpg);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.canver__title {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  line-height: 36px;
 }
 
 .form {
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   padding: 15px;
-  /* border: 1px solid #000; */
-  background-color: #000;
   color: #fff;
   border-radius: 15px;
 }
@@ -48,12 +59,12 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+  gap: 10px;
 }
 
 .canver__top-box {
   padding: 20px;
-  /* border: 1px solid #000; */
-  background-color: #333;
+  background-color: #20202040;
   border-radius: 15px;
   text-align: center;
 }
@@ -64,43 +75,44 @@ body {
   margin-bottom: 10px;
 }
 
-.canver__row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 50px;
-}
-
-.canver__row-box {
+.canver__row-box,
+.canver__bottom-box {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.canver__row-select {
-  padding: 10px 5px;
-  background-color: #333;
+.canver__row-select,
+.canver__bottom-select {
+  padding: 20px 10px;
+  font-size: 20px;
+  background-color: #20202055;
   color: #fff;
   border: none;
 }
 
 .canver__bottom {
-  margin-top: 5px;
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
+  margin-top: 25px;
 }
 
-.canver__bottom-input {
+.input {
+  font-size: 20px;
+  margin-top: 15px;
   border: none;
-  background-color: #333;
+  background-color: #20202055;
   color: #fff;
-  padding: 10px 5px;
+  padding: 20px 10px;
   width: 100%;
   outline: none;
 }
 
-.canver__bottom-input:focus {
+.canver__bottom-input {
+  font-size: 30px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.input:focus {
   border-color: cornflowerblue;
   -webkit-box-shadow: 0px 0px 20px 0px cornflowerblue;
   -moz-box-shadow: 0px 0px 20px 0px cornflowerblue;
@@ -118,17 +130,25 @@ body {
     line-height: 21px;
   }
 
-  .canver__row {
-    gap: 10px;
+  .canver__row-box,
+  .canver__bottom-box {
+    font-size: 17px;
+    line-height: 21px;
   }
-
-  .canver__bottom{
-    gap: 10px;
+  
+  .canver__row-select,
+  .canver__bottom-select {
+    padding: 15px;
+    font-size: 17px;
+    line-height: 21px;
+  }
+  
+  .input {
+    padding: 15px;
+    font-size: 17px;
+    line-height: 21px;
   }
 }
 
 @media(max-width: 410px) {
-  .canver__row-select {
-    max-width: 160px;
-  }
 }

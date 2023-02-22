@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Calculator && Currency converter</title>
+    <title>Currency converter</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container">
+    
       <div class="canver">
+        <h1 class="canver__title">Конвертор валют</h1>
         <form class="form">
-          <h1 class="canver__title">Конвертер валют</h1>
           <div class="canver__top">
             <div class="canver__top-box">
               <h5 class="canver__box-title">Курс USD</h5>
@@ -35,9 +35,13 @@
                 <option value="RUB" selected>UAH — Гривня</option>
               </select>
             </div>
-            <div class="canver__row-box">
+            <input id="input" class="canver__row-input input" type="number" autofocus>
+          </div>
+
+          <div class="canver__bottom">
+            <div class="canver__bottom-box">
               <label for="name">Отримую:</label>
-              <select class="canver__row-select" id="select">
+              <select class="canver__bottom-select" id="select">
                 <option value="USD">USD — Долар США</option>
 								<option value="EUR">EUR — Євро</option>
 								<option value="GBP">GPB — Фунт стерлингів</option>
@@ -45,11 +49,7 @@
 								<option value="SEK">SEK — Шведська крона</option>
               </select>
             </div>
-          </div>
-
-          <div class="canver__bottom">
-            <input id="input" class="canver__bottom-input" type="number" autofocus>
-            <input id="result" class="canver__bottom-input" type="number" disabled>
+            <input id="result" class="canver__bottom-input input" type="number" disabled>
           </div>
         </form>
       </div>
